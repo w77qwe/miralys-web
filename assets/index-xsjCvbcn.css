@@ -63,3 +63,22 @@
     white-space: nowrap !important;
   }
 }
+
+/* --- ФИНАЛЬНЫЙ ФИКС ДЛЯ МОБИЛОК (УБИРАЕМ МЕНЮ И ФИКСИМ ПРЫЖКИ ЭКРАНА) --- */
+@media (max-width: 768px) {
+  /* Выпиливаем меню нахуй, оставляем только 3D сферу */
+  section.hidden.md\:flex {
+    display: none !important; 
+  }
+  
+  /* Поднимаем карточку повыше, чтобы футер её не ебал при появлении строки адреса */
+  #latest-drop-card {
+    bottom: 85px !important; 
+  }
+  
+  /* Заставляем браузер правильно считать высоту со строкой адреса (dynamic viewport) */
+  html, body, #root > div {
+    height: 100dvh !important;
+    min-height: 100dvh !important;
+  }
+}
