@@ -43,3 +43,23 @@
     font-size: 10px !important;
   }
 }
+
+/* --- ФИКСЫ ПОВЕРХ СТАРЫХ СТИЛЕЙ --- */
+@media (max-width: 768px) {
+  section.hidden.md\:flex {
+    top: 110px !important; 
+  }
+  #latest-drop-card {
+    bottom: 60px !important; 
+  }
+  #social-links-footer {
+    bottom: 15px !important;
+    width: 90% !important;
+    flex-wrap: wrap !important;
+    gap: 10px 15px !important;
+  }
+  #social-links-footer a {
+    font-size: 11px !important;
+    white-space: nowrap !important;
+  }
+}
